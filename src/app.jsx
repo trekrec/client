@@ -1,12 +1,19 @@
 var React = require('react');
+var Map = require('./map');
 
-var Hello = React.createClass({
+var App = React.createClass({
   render: function() {
-    return <h1 className="red">
-      Hello!
-    </h1>
+    return (
+      <div>
+        <div className="title">
+           trekrec
+        </div>
+        <Map>
+        </Map>
+      </div>
+    );
   }
 });
 
-var element = React.createElement(Hello, {});
+var element = React.createElement(App, {});
 React.render(element, document.querySelector('.container'));

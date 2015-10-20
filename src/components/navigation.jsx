@@ -5,6 +5,9 @@ var NavBar = React.createClass({
   render: function() {
     return (
       <div className="nav-bar">
+        <Link to="main" className="main-link">
+          Home
+        </Link>
         <Link to="map" className="map-link">
           Map
         </Link>

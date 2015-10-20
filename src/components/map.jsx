@@ -1,5 +1,6 @@
 var React = require('react');
 var circleDraw = require('../helpers/circleDraw');
+var NavBar = require('./navigation');
 
 var Map = React.createClass({
   getInitialState: function() {
@@ -11,9 +12,12 @@ var Map = React.createClass({
   },
   render: function() {
     return (
-      <div id="map-container">
-        <input id="pac-input" className="controls" type="text" placeholder="Search Box" />
-        <div ref="mapRef" id="map-canvas">
+      <div>
+        <NavBar />
+        <div id="map-container">
+          <input id="pac-input" className="controls" type="text" placeholder="Search Box" />
+          <div ref="mapRef" id="map-canvas">
+          </div>
         </div>
       </div>
     );

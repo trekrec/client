@@ -6,12 +6,14 @@ var Route = ReactRouter.Route;
 
 var Main = require('./components/main');
 var Map = require('./components/map');
+var Itinerary = require('./components/itinerary');
 var Feed = require('./components/feed');
 
 var routes = (
   <Router history={new HashHistory}>
     <Route name="main" path="/" component={Main}></Route>
     <Route name="map" path="/map" component={Map}></Route>
+    <Route name="itinerary" path="/itinerary" component={Itinerary}></Route>
     <Route name="feed" path="/feed" component={Feed}></Route>
   </Router>
 );  

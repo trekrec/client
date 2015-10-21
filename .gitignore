@@ -1,6 +1,6 @@
 node_modules/
 main.js
 style.css
-index.html
+public/index.html
 server/node_modules/
 server/db/pg/config.js

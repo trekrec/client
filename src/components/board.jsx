@@ -4,7 +4,12 @@ var Board = React.createClass({
   render: function() {
     return (
       <div className="board">
-        Board Page
+        <div className="boardTitle">
+          {this.props.title}
+        </div>
+        <div className="boardDescription">
+          {this.props.description}
+        </div>
       </div>
     );
   }

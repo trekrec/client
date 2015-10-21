@@ -7,7 +7,6 @@ var Main = React.createClass({
     return (
       <div>
         <div className="title">
-           trekrec
         </div>
         <NavBar />
       </div>

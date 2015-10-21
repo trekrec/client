@@ -4,20 +4,22 @@ var Link = require('react-router').Link;
 var NavBar = React.createClass({
   render: function() {
     return (
-      <div className="nav-bar">
-        <Link to="main" className="main-link">
-          Home
-        </Link>
-        <Link to="map" className="map-link">
-          Map
-        </Link>
-        <Link to="itinerary" className="itinerary-link">
-          Itinerary
-        </Link>
-        <Link to="feed" className="feed-link">
-          Feed
-        </Link>
-      </div>
+      <nav className="navbar navbar-default header">
+        <div className="container-fluid">
+          <Link to="main" className="navbar-brand">
+            Home
+          </Link>
+          <Link to="map" className="navbar-brand">
+            Map
+          </Link>
+          <Link to="itinerary" className="navbar-brand">
+            Itinerary
+          </Link>
+          <Link to="feed" className="navbar-brand">
+            Feed
+          </Link>
+        </div>
+      </nav>
     );
   }
 });

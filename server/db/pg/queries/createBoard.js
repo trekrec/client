@@ -14,21 +14,10 @@ var db = require('../db');
 * @return {Promise} Returns a promise that will resolve with the results of the insert
 */ 
 
-var createBoard = function(title, description, data) {
-  var columnSQL = "";
-  var valueSQL = "";
-  for (var key in data) {
-    columnSQL += `,${key}`
-    if (typeof data[key] === 'string') {
-      valueSQL += `,'${data[key]}'`
-    }
-    else {
-      valueSQL += `,${data[key]}`
-    }
-  }
+var createBoard = function(title, description) {
 
-  var insertSQL = `INSERT INTO boards (title, description, ${columnSQL}) 
-                   VALUES (${latitude}, ${longitude}, ${valueSQL})`
+  var insertSQL = `INSERT INTO boards (title, description) 
+                   VALUES (${title}, ${description})`
 
   return db.raw(insertSQL);
 }

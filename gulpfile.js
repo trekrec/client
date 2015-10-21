@@ -10,6 +10,7 @@ var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var babel = require('gulp-babel');
+var sourcemaps = require('gulp-sourcemaps');
 
 var notify = function(error) {
   var message = 'In: ';

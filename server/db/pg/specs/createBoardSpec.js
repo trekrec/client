@@ -21,11 +21,10 @@ describe('postgres queries', function() {
         var createResult = yield createBoard('San Francisco', 'The best city in the world', {name: 'test'})
         createResult.command.should.equal('INSERT');
         createResult.rowCount.should.equal(1);
-        var queryResult = yield db.select('*').from('boards').where({name: 'test'});
+        var queryResult = yield db.select('*').from('boards');
         queryResult.length.should.equal(1);
         queryResult[0].title.should.equal('San Francisco');
         queryResult[0].description.should.equal('The best city in the world');
-        queryResult[0].name.should.equal('test');
         done();
       });
       testCreateBoard();

@@ -1,7 +1,7 @@
 #map-canvas {
-  height: 400px;
+  height: 100%;
   margin: 20px;
-  max-width: 800px; 
+  width: 100%; 
 }
 
 .black {
@@ -53,18 +53,22 @@
 
 .map-link {
   padding: 2;
+  color: black;
 }
 
 .feed-link {
   padding: 2;
+  color: black;
 }
 
 .main-link {
   padding: 2;
+  color: black;
 }
 
 .itinerary-link {
   padding: 2;
+  color: black;
 }
 
 .board {

@@ -19,7 +19,7 @@ To run server:
   > nodemon --harmony server.js
 ```
 
-To test database queries:
+To test PostgreSQL database queries:
 
 ```
   > cd server/db/pg/specs

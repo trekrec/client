@@ -11,6 +11,9 @@ var NavBar = React.createClass({
         <Link to="map" className="map-link">
           Map
         </Link>
+        <Link to="itinerary" className="itinerary-link">
+          Itinerary
+        </Link>
         <Link to="feed" className="feed-link">
           Feed
         </Link>

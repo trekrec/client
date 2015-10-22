@@ -4,12 +4,12 @@ var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var watchify = require('watchify');
 var reactify = require('reactify');
+var babelify = require('babelify');
 var notifier = require('node-notifier');
 var server = require('gulp-server-livereload');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
-var babel = require('gulp-babel');
 var sourcemaps = require('gulp-sourcemaps');
 var exit = require('gulp-exit');
 
@@ -38,7 +38,7 @@ var notify = function(error) {
 
 var bundler = watchify(browserify({
   entries: ['./src/app.jsx'],
-  transform: [reactify],
+  transform: [reactify, babelify],
   extensions: ['.jsx'],
   debug: true,
   cache: {},

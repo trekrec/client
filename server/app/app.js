@@ -1,3 +1,5 @@
-var makeBoard = require('./makeBoard');
+var createBoard = require('./createBoard');
+var createUser = require('./createUser');
 
-exports.makeBoard = makeBoard;
+exports.createBoard = createBoard;
+exports.createUser = createUser;

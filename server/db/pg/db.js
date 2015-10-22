@@ -16,3 +16,4 @@ module.exports = knex;
 // Put this after export because its dependent on the export
 // creates tables if they don't already exist
 var boardsSchema = require('./schemas/boardsSchema')();
+var usersSchema = require('./schemas/usersSchema')();

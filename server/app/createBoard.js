@@ -1,6 +1,9 @@
 var Promise = require('bluebird');
-var db = require('../db/pg/queries/createBoard');
+var db = require('../db/pg/queries/pgQueries');
 
-var createBoard = Promise.coroutine(function(title, description, data) {
-  var dbInsertResult = yield db.createBoard
+var createBoard = Promise.coroutine(function*(username, password) {
+  var dbInsertResult = yield db.createBoard(username, password);
+  return dbInsertResult;
 });
+
+module.exports = createBoard;

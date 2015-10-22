@@ -14,6 +14,11 @@ var Map = React.createClass({
     return (
       <div>
         <NavBar />
+        <button type="button" name="world-map-button" id="world-map-button"
+          onClick={this.showWorldMap}
+        >
+          World Map
+        </button>
         <div id="map-container">
           <input id="pac-input" className="controls" type="text" placeholder="Search Box" />
           <div ref="mapRef" id="map-canvas">
@@ -69,10 +74,15 @@ var Map = React.createClass({
     autocomplete.addListener('place_changed', function() { 
       var newPlace = autocomplete.getPlace();
 
-      new google.maps.Marker({
+      var marker = new google.maps.Marker({
         map: map,
-        position: newPlace.geometry.location
+        position: newPlace.geometry.location,
+        animation: google.maps.Animation.DROP
       });
+      console.log('marker: ', marker);
+
+      // TODO: figure out how to handle this click event and what the url should be that we show
+      google.maps.event.addListener(marker, 'click', function() {window.location.href = marker.url;});
     });
 
     return map;
@@ -109,6 +119,9 @@ var Map = React.createClass({
     // rendering when the zoom of the map is changed
     circleDraw.radiusOnZoom(map, userLocationDot);
     circleDraw.animateOnZoom(map, userLocationPulse);
+  },
+  showWorldMap: function() {
+    // TODO: get the rendering of the map's viewport to be the worldmap
   }
 });
 

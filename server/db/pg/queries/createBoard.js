@@ -10,7 +10,6 @@ var db = require('../db');
 */ 
 
 var createBoard = function(title, description) {
-  console.log('db: ', db);
   return db.table('boards')
     .insert({title: title, description: description});
 }

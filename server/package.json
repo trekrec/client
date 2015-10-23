@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --compilers js:mocha-traceur db/pg/specs/ db/documentStore/specs/ app/specs/",
     "start": "node server.js"
   },
   "author": "",
@@ -14,9 +14,12 @@
     "body-parser": "^1.14.1",
     "cors": "^2.7.1",
     "express": "^4.13.3",
+    "express-session": "^1.11.3",
     "knex": "^0.8.6",
     "mocha": "^2.3.3",
     "mocha-traceur": "^2.1.0",
+    "mongod": "^1.3.0",
+    "mongodb": "^2.0.46",
     "pg": "^4.4.3",
     "should": "^7.1.1"
   }

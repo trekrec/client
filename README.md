@@ -19,9 +19,9 @@ To run server:
   > nodemon --harmony server.js
 ```
 
-To test PostgreSQL database queries:
+To test backend application layer and db queries run:
 
 ```
-  > cd server/db/pg/specs
-  > mocha --harmony QUERY_SPEC_NAME.js
+  > cd server
+  > npm test
 ```
